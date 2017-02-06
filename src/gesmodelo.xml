@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<openerp>
+	<data>
+	<record model="ir.actions.act_window" id="plazas_list_action">
+		<field name="res_model">gest.park</field>
+		<field name="name">PARKING EMPRESA SA</field>
+		<field name="view_type">form</field>
+	</record>
+	<!--- menu superior -->
+	<menuitem id="main_gestpark_menu" name="GestPark"/>
+	<!--- menu de una sola vista -->
+	<menuitem id="gestpark_menu" name="Gestion Parking" parent="main_gestpark_menu"/>
+	<!-- definimos otro menu quetien como menu padre el anterior -->
+	<menuitem id="plazas_menu" name="Plazas" parent="gestpark_menu" action="plazas_list_action"/>
+	</data>
+</openerp>
